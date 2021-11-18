@@ -318,4 +318,11 @@ a.item__value {
 	article {
 		right: 0;
 	}
+
+	.home__title,
+	.home__subtitle,
+	.wrapper,
+	.home__description {
+		text-align: initial;
+	}
 }
