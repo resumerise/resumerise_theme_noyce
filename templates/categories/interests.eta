@@ -1,21 +1,19 @@
-<section id="interests" class="certifications">
+<section class="section" id="interests">
 	<% if(it.resume.settings?.labels?.categoryProperty?.interest?.categoryTitle) { %>
-		<header>
-			<%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %>
-		</header>
+		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.interest.categoryTitle %></header>
 	<% } %>
-	<div class="article-container">
+	<div class="article__container s-grid">
 		<% it.resume?.interests.forEach(function(interest) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.interest, showDelete: true, id: interest.id}) %>
-				<div class="article-header">
+				<div class="article__header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.interest?.name, 
 						value: interest.name,
 						classes: 'article__title'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article__content s-grid">
 					<%~ include('list', {
 						label: it.resume.settings?.labels?.categoryProperty?.interest?.keywords, 
 						data: interest.keywords,

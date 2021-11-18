@@ -1,23 +1,16 @@
-<section id="volunteer" class="volunteer">
+<section class="section" id="volunteer">
 	<% if(it.resume.settings?.labels?.categoryProperty?.volunteer?.categoryTitle) { %>
-		<header>
-			<%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %>
-		</header>
+		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.volunteer.categoryTitle %></header>
 	<% } %>
 	<div class="article-container">
 		<% it.resume?.volunteer.forEach(function(volunteer) { %>
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
-				<div class="article-header">
+				<div class="article__header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
 						value: volunteer.organization,
 						classes: 'article__title'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
-						value: volunteer.position,
-						classes: 'article__subtitle'
 					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate,
@@ -27,17 +20,22 @@
 						settings: it.resume.settings,
 						classes: 'article__date'
 					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
+						value: volunteer.position,
+						classes: 'article__subtitle'
+					}) %>
 					<%~ include('key-url-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
 						value: volunteer.website,
 						classes: 'article__url'
 					}) %>
 				</div>
-				<div class="article-content">
+				<div class="article__content s-grid">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.summary, 
 						value: volunteer.summary,
-						classes: 'article__text'
+						classes: 'article__description'
 					}) %>
 					<%~ include('list', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.highlights, 

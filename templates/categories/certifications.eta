@@ -1,26 +1,26 @@
-<section id="certifications" class="certifications">
+<section class="section" id="certifications">
 	<% if (it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle) { %>
-		<header><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></header>
+		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.certificate?.categoryTitle %></header>
 	<% } %>
 	<% it.resume?.certifications.forEach(function(certificate) { %>
-		<div class="article-container">
+		<div class="article__container grid">
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work}) %>
-				<div class="article-header">
+				<div class="article__header">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
 						value: certificate.issuer,
 						classes: 'article__title'
 					}) %>
 					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
-						value: certificate.title,
-						classes: 'article__subtitle'
-					}) %>
-					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 
 						value: it.formatDate(certificate.issueDate, it.resume.settings),
 						classes: 'article__date'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.certificate?.title, 
+						value: certificate.title,
+						classes: 'article__description'
 					}) %>
 				</div>
 			</article>
