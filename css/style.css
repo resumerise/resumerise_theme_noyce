@@ -313,10 +313,15 @@ a.item__value {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 2rem;
+		margin: auto;
+	}
+
+	.section__title {
+		left: -15px;
 	}
 
 	article {
-		right: 0;
+		right: -5px;
 	}
 
 	.home__title,
