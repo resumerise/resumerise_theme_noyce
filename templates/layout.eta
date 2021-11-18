@@ -45,6 +45,13 @@
 
 			</div>
 			<div class="right">
+			
+				<!-- AWARDS -->
+				<%~ include("awards", {
+					resume: it.resume,
+					formatDate: it.formatDate
+				}) %>
+				
 				<!-- VOLUNTEER -->
 				<%~ include("volunteer", {
 					resume: it.resume,
@@ -59,12 +66,6 @@
 
 				<!-- SKILLS -->
 				<%~ include("skills", {
-					resume: it.resume,
-					formatDate: it.formatDate
-				}) %>
-				
-				<!-- AWARDS -->
-				<%~ include("awards", {
 					resume: it.resume,
 					formatDate: it.formatDate
 				}) %>
