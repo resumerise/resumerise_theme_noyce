@@ -10,7 +10,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.reference?.name, 
 						value: reference.name,
-						classes: 'article__title'
+						classes: 'article__titlee'
 					}) %>
 				</div>
 				<div class="article__content s-grid">

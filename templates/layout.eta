@@ -82,6 +82,12 @@
 					formatDate: it.formatDate
 				}) %>
 
+				<!-- REFERENCES -->
+				<%~ include("reference", {
+					resume: it.resume,
+					formatDate: it.formatDate
+				}) %>
+
 				<!-- PROFILE -->
 				<%~ include("profile", {
 					resume: it.resume,

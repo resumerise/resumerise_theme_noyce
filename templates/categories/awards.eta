@@ -7,20 +7,22 @@
 			<article>
 				<%~ include('nav', {categoryKey: it.resume.settings?.categoryKeys?.award, id: award.id, showDelete: true}) %>
 				<div class="article__header">
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
-						value: award.title,
-						classes: 'article__title'
-					}) %>
+					<div class="article__header-wrapper">
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.award?.title, 
+							value: award.title,
+							classes: 'article__title'
+						}) %>
+						<%~ include('key-value-item', {
+							label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
+							value: award.awarder,
+							classes: 'article__subtitle'
+						}) %>
+					</div>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.award?.date, 
 						value: it.formatDate(award.date, it.resume.settings),
 						classes: 'article__date'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.award?.awarder, 
-						value: award.awarder,
-						classes: 'article__subtitle'
 					}) %>
 				</div>
 				<div class="article__content s-grid">

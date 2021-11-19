@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/*===== VARIABLES CSS =====*/
 :root {
 	--header-height: 3rem;
 
@@ -21,6 +20,7 @@
 
 	/*========== FONT & TYPORGRAPHY ==========*/
 	--body-font: 'Poppins', sans-serif;
+	--second-font: 'Playfair Display', serif;
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
 	--biggest-font-size: 4rem;
 	--bigger-font-size: 3rem;
@@ -157,15 +157,58 @@ article::before {
 	-o-border-radius: 1rem;
 }
 
-.article__title {
+.article__header-wrapper {
+	display: flex;
+	flex-direction: row;
+	column-gap: var(--mb-1-5);
+	align-items: center;
+}
+
+.article__title,
+.article__titlee {
+	position: relative;
 	font-weight: var(--font-600);
 	font-size: var(--h2-font-size);
 }
 
 .article__subtitle {
-	font-weight: var(--font-500);
+	position: relative;
+	font-weight: var(--font-700);
 	font-size: var(--h3-font-size);
+	font-family: var(--second-font);
+	color: var(--home-title-color);
 }
+
+.article__title::before {
+	content: '';
+	position: absolute;
+	top: 17px;
+	right: -19px;
+	width: 16px;
+	height: 2px;
+	background-color: var(--home-title-color);
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+}
+
+/* .article__subtitle::before{
+	content: '';
+	position: absolute;
+	top: 13px;
+	left: -21px;
+	width: 16px;
+	height: 2px;
+	background-color: var(--home-title-color);
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+} */
+
 
 .article__url {
 	font-style: italic;
@@ -209,7 +252,7 @@ article::before {
 }
 
 .wrapper {
-	margin: var(--mb-1) 0;
+	margin: var(--mb-1-5) 0;
 }
 
 .hide {
@@ -311,7 +354,7 @@ a.item__value {
 @media screen and (min-width: 768px) {
 	.main {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: .8fr 1fr;
 		column-gap: 2rem;
 		margin: auto;
 	}
@@ -322,6 +365,38 @@ a.item__value {
 
 	article {
 		right: -5px;
+	}
+
+	.home__img {
+		margin: 0;
+	}
+
+	.home__title,
+	.home__subtitle,
+	.wrapper,
+	.home__description {
+		text-align: initial;
+	}
+}
+
+@media print, screen {
+	.main {
+		display: grid;
+		grid-template-columns: .8fr 1fr;
+		column-gap: 2rem;
+		margin: auto;
+	}
+
+	.section__title {
+		left: -15px;
+	}
+
+	article {
+		right: -5px;
+	}
+
+	.home__img {
+		margin: 0;
 	}
 
 	.home__title,

@@ -10,7 +10,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issuer, 
 						value: certificate.issuer,
-						classes: 'article__title'
+						classes: 'article__titlee'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.certificate?.issueDate, 

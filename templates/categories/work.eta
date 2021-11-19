@@ -7,29 +7,31 @@
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.work, showDelete: true, id: work.id}) %>
                 <div class="article__header">
+                    <div class="article__header-wrapper">
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.company, 
                         value: work.company,
                         classes: 'article__title'
-                    }) %>
-                    <%~ include('key-url-item', {
-                        label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
-                        value: work.website,
-                        classes: 'article__url'
                     }) %>
                     <%~ include('key-value-item', {
                         label: it.resume.settings?.labels?.categoryProperty?.work?.position, 
                         value: work.position,
                         classes: 'article__subtitle'
                     }) %>
-                    <%~ include('date-range', {
-                        formatDate: it.formatDate,
-                        startDate: work.startDate,
-                        endDate: work.endDate,
-                        present: work.present,
-                        settings: it.resume.settings,
-                        classes: 'article__date'
-                    }) %>
+                </div>
+                <%~ include('key-url-item', {
+                    label: it.resume.settings?.labels?.categoryProperty?.work?.website, 
+                    value: work.website,
+                    classes: 'article__url'
+                }) %>
+                <%~ include('date-range', {
+                    formatDate: it.formatDate,
+                    startDate: work.startDate,
+                    endDate: work.endDate,
+                    present: work.present,
+                    settings: it.resume.settings,
+                    classes: 'article__date'
+                }) %>
                 </div>
                 <div class="article__content s-grid">
                     <%~ include('key-value-item', {
