@@ -19,6 +19,11 @@
 						classes: 'article__subtitle'
 					}) %>
 				</div>
+					<%~ include('key-url-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
+						value: volunteer.website,
+						classes: 'article__url'
+					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate,
 						startDate: volunteer.startDate,
@@ -26,11 +31,6 @@
 						present: volunteer.present,
 						settings: it.resume.settings,
 						classes: 'article__date'
-					}) %>
-					<%~ include('key-url-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
-						value: volunteer.website,
-						classes: 'article__url'
 					}) %>
 				</div>
 				<div class="article__content s-grid">
