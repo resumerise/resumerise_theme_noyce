@@ -183,6 +183,8 @@ article::before {
 .article__title,
 .article__titlee {
 	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	font-weight: var(--font-600);
 	font-size: var(--h2-font-size);
