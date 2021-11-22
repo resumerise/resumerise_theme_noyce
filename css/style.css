@@ -60,9 +60,9 @@
 		--biggest-font-size: 5rem;
 		--bigger-font-size: 4rem;
 		--big-font-size: 3rem;
-		--h1-font-size: 2.25rem;
-		--h2-font-size: 1.5rem;
-		--h3-font-size: 1.25rem;
+		--h1-font-size: 2rem;
+		--h2-font-size: 1.4rem;
+		--h3-font-size: 1.1rem;
 		--normal-font-size: 1rem;
 		--small-font-size: .875rem;
 		--smaller-font-size: .813rem;
@@ -97,22 +97,6 @@ body {
 ::selection {
 	background: #5e5e5e;
 	color: white;
-}
-
-h1, h2, h3, ul, p {
-	margin: 0;
-}
-
-h1, h2, h3 {
-	color: var(--title-color);
-	font-weight: var(--font-600);
-}
-
-h4 {
-	font-weight: var(--font-600);
-	font-size: var(--h1-font-size);
-	color: var(--text-color-light);
-	margin: var(--mb-1-5) 0 0;
 }
 
 ul {
@@ -167,7 +151,7 @@ article::before {
 	-o-border-radius: 1rem;
 }
 
-.article__title{
+.article__title {
 	position: relative;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -378,4 +362,46 @@ a.item__value {
 		-ms-border-radius: 1rem;
 		-o-border-radius: 1rem;
 	}
+}
+
+.icon {
+	font-style: normal;
+	margin-right: 0;
+	width: 0.6em;
+}
+
+.icon.twitter:before {
+	content: "\f099";
+}
+
+.icon.github:before {
+	content: "\f09b";
+}
+
+.icon.facebook:before {
+	content: "\f39e";
+}
+
+.icon.instagram:before {
+	content: "\f16d";
+}
+
+.icon.xing:before {
+	content: "\f168";
+}
+
+.icon.behance:before {
+	content: "\f39e";
+}
+
+.icon.dribbble:before {
+	content: "\f17d";
+}
+
+.icon.medium:before {
+	content: "\f23a";
+}
+
+.icon.linkedin:before {
+	content: "\f08c";
 }
