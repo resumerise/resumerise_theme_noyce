@@ -10,7 +10,7 @@
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.skill?.name, 
 						value: skill.name,
-						classes: 'article__titlee'
+						classes: 'article__title'
 					}) %>
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.skill?.level, 

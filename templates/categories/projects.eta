@@ -7,31 +7,29 @@
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.project, showDelete: true, id: project.id}) %>
 				<div class="article__header">
-					<div class="article__header-wrapper">
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
-							value: project.title,
-							classes: 'article__title'
-						}) %>
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
-							value: project.client,
-							classes: 'article__subtitle'
-						}) %>
-					</div>
-				<%~ include('key-url-item', {
-					label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
-					value: project.website,
-					classes: 'article__url'
-				}) %>
-				<%~ include('date-range', {
-					formatDate: it.formatDate,
-					startDate: project.startDate,
-					endDate: project.endDate,
-					present: project.present,
-					settings: it.resume.settings,
-					classes: 'article__date'
-				}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.title, 
+						value: project.title,
+						classes: 'article__title'
+					}) %>
+					<%~ include('date-range', {
+						formatDate: it.formatDate,
+						startDate: project.startDate,
+						endDate: project.endDate,
+						present: project.present,
+						settings: it.resume.settings,
+						classes: 'article__date'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.client, 
+						value: project.client,
+						classes: 'article__subtitle'
+					}) %>
+					<%~ include('key-url-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.project?.website, 
+						value: project.website,
+						classes: 'article__url'
+					}) %>
 				</div>
 				<div class="article__content s-grid">
 					<%~ include('key-value-item', {

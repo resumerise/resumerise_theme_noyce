@@ -7,23 +7,21 @@
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.publication, id: publication.id, showDelete: true}) %>
                 <div class="article__header">
-                    <div class="article__header-wrapper">
-                        <%~ include('key-value-item', {
-                            label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
-                            value: publication.name,
-                            classes: 'article__title'
-                        }) %>
-                        <%~ include('key-value-item', {
-                            label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
-                            value: publication.publisher,
-                            classes: 'article__subtitle'
-                        }) %>
-                    </div>
-                <%~ include('key-value-item', {
-                    label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
-                    value: it.formatDate(publication.releaseDate, it.resume.settings),
-                    classes: 'article__date'
-                }) %>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.publication?.name, 
+                        value: publication.name,
+                        classes: 'article__title'
+                    }) %>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.publication?.releaseDate, 
+                        value: it.formatDate(publication.releaseDate, it.resume.settings),
+                        classes: 'article__date'
+                    }) %>
+                    <%~ include('key-value-item', {
+                        label: it.resume.settings?.labels?.categoryProperty?.publication?.publisher, 
+                        value: publication.publisher,
+                        classes: 'article__subtitle'
+                    }) %>
                 <%~ include('key-url-item', {
                     label: it.resume.settings?.labels?.categoryProperty?.publication?.website, 
                     value: publication.website,

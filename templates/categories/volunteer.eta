@@ -7,22 +7,10 @@
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.volunteer, showDelete: true, id: volunteer.id}) %>
 				<div class="article__header">
-				    <div class="article__header-wrapper">
 					<%~ include('key-value-item', {
 						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.organization, 
 						value: volunteer.organization,
 						classes: 'article__title'
-					}) %>
-					<%~ include('key-value-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
-						value: volunteer.position,
-						classes: 'article__subtitle'
-					}) %>
-				</div>
-					<%~ include('key-url-item', {
-						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
-						value: volunteer.website,
-						classes: 'article__url'
 					}) %>
 					<%~ include('date-range', {
 						formatDate: it.formatDate,
@@ -31,6 +19,16 @@
 						present: volunteer.present,
 						settings: it.resume.settings,
 						classes: 'article__date'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.position, 
+						value: volunteer.position,
+						classes: 'article__subtitle'
+					}) %>
+					<%~ include('key-url-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.volunteer?.website, 
+						value: volunteer.website,
+						classes: 'article__url'
 					}) %>
 				</div>
 				<div class="article__content s-grid">

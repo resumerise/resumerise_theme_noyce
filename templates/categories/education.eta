@@ -7,26 +7,24 @@
 			<article>
 				<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.education, showDelete: true, id: education.id}) %>
 				<div class="article__header">
-				    <div class="article__header-wrapper">
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
-							value: education.institution,
-							classes: 'article__title'
-						}) %>
-						<%~ include('key-value-item', {
-							label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
-							value: education.area,
-							classes: 'article__subtitle'
-						}) %>
-					</div>
-				<%~ include('date-range', {
-					formatDate: it.formatDate, 
-					startDate: education.startDate,
-					endDate: education.endDate,
-					present: education.present,
-					settings: it.resume.settings,
-					classes: 'article__date'
-				}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.education?.institution, 
+						value: education.institution,
+						classes: 'article__title'
+					}) %>
+					<%~ include('date-range', {
+						formatDate: it.formatDate, 
+						startDate: education.startDate,
+						endDate: education.endDate,
+						present: education.present,
+						settings: it.resume.settings,
+						classes: 'article__date'
+					}) %>
+					<%~ include('key-value-item', {
+						label: it.resume.settings?.labels?.categoryProperty?.education?.area, 
+						value: education.area,
+						classes: 'article__subtitle'
+					}) %>
 				</div>
 				<div class="article__content s-grid">
 					<%~ include('key-value-item', {
